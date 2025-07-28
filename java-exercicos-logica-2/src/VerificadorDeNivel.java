@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class VerificadorDeNivel {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
+            // Utilizei o scanner dentro do try para poder fechar o scanner no final do
+            // programa.
             System.out.println("Digite o quanto de experiencia você adquiriu para saber seu elo onde.");
             System.out.println("============ TABELA DE ELO ============");
             System.out.println("*       0 ATÉ 1000 = FERRO            *");
@@ -20,11 +22,16 @@ public class VerificadorDeNivel {
             System.out.println("=======================================");
             System.out.print("Digite aqui...\n");
 
+            // Menu criado para interagir com o usuário
+
             try {
+                // Criei um try catch para tratar o erro de um possivel numero negativo, ja que
+                // aqui serão usados apenas numeros positivos
                 Double experiencia = scanner.nextDouble();
 
                 if (experiencia < 0) {
                     throw new Exception("Erro. Volte e digite um valor positivo.");
+                    // Criei um tratamento para o possível erro com a mensagem no Exception.
                 } else if (experiencia <= 1000) {
                     System.out.println("Ferro");
                 } else if (experiencia <= 2000) {
@@ -38,6 +45,7 @@ public class VerificadorDeNivel {
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
+                // Aqui ele busca a mensagem que foi declarada acima.
             }
         }
     }

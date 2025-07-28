@@ -22,6 +22,7 @@ public class CalculadoraTryCatch {
             // Iniciando as váriaveis que serão utilizadas no projeto.
 
             System.out.println("Escolha uma das operações digitando o sinal delas:\n+ , - , * ou /");
+
             try {
                 operador = scanner.next().charAt(0);
                 // Solicitando ao usuário qual operação ele deseja fazer.
@@ -36,6 +37,7 @@ public class CalculadoraTryCatch {
                 // Encerra o programa.
 
             }
+
             switch (operador) {
                 // Utilização do switch com a váriavel 'operador' que é do tipo char para
                 // selecionar a operação utilizando o símbolo da mesma.

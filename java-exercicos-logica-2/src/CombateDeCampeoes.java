@@ -15,16 +15,16 @@ public class CombateDeCampeoes { // Iniciando a classe.
         Double poderDoAtaquePrimeiroCampeao = 0.0, poderDoAtaqueSegundoCampeao = 0.0;
         // Declarando as variaveis que serao utilizadas.
 
-        System.out.println("Digite o nome do 1º seu campeao:");
+        System.out.println("Digite o nome do 1º campeao:");
         nomePrimeiroCampeao = scanner.next();
 
-        System.out.println("Qual o total de damage do 1º seu campeao:");
+        System.out.println("Qual o total de damage do 1º campeao:");
         poderDoAtaquePrimeiroCampeao = scanner.nextDouble();
 
-        System.out.println("Digite o nome do 2º seu campeao:");
+        System.out.println("Digite o nome do 2º campeao:");
         nomeSegundoCampeao = scanner.next();
 
-        System.out.println("Qual o total de damage do 2º seu campeao:");
+        System.out.println("Qual o total de damage do 2º campeao:");
         poderDoAtaqueSegundoCampeao = scanner.nextDouble();// Recolhimento de dados pelo usuário.
 
         combate(nomePrimeiroCampeao, nomeSegundoCampeao, poderDoAtaquePrimeiroCampeao, poderDoAtaqueSegundoCampeao);

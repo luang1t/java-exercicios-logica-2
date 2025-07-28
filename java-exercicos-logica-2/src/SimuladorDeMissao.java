@@ -33,18 +33,20 @@ public class SimuladorDeMissao {
         System.out.println("===============================");
         System.out.print("Escolha uma opção:");
         // Menu que será apresentado para o usuário.
+        while (true) {
+            try {
+                // Try/Catch para tratamento de possiveis erros de digitação do usuário.
 
-        try {
-            // Try/Catch para tratamento de possiveis erros de digitação do usuário.
+                selecioneOpcao = scanner.nextInt();
+                // Solicitação do input do usuário.
 
-            selecioneOpcao = scanner.nextInt();
-            // Solicitação do input do usuário.
-
-            limparTerminal();
-            // Classe para limpar o terminal
-        } catch (Exception e) {
-            System.out.println("Você digitou algo inválido. Tente novamente com um número.");
-            System.exit(0);
+                limparTerminal();
+                // Classe para limpar o terminal
+                break;
+            } catch (Exception e) {
+                System.out.println("Você digitou algo inválido. Tente novamente com um número.");
+                System.exit(0);
+            }
         }
         switch (selecioneOpcao) {
             // Recebeu como parametro a váriavel SELECIONE OPCAO
